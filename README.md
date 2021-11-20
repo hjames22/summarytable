@@ -29,23 +29,33 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 suppressPackageStartupMessages(library(summarytable))
+#summary without rows
 count_freq_perc(iris, Species, rows = NULL)
 #> # A tibble: 3 × 3
-#>   Species        n percentage
+#>   Species    count percentage
 #>   <fct>      <int>      <dbl>
 #> 1 setosa        50       33.3
 #> 2 versicolor    50       33.3
 #> 3 virginica     50       33.3
+```
 
-#three groups
-count_freq_perc(starwars, homeworld, rows = 3)
+# A tibble: 3 × 3
 
-#all groups with rows specified
-count_freq_perc(starwars, homeworld, rows = NULL)
+Species count percentage <fct> <int> <dbl> 1 setosa 50 33.3 2 versicolor
+50 33.3 3 virginica 50 33.3
 
-#all groups without rows specified: same result but will throw warning
-count_freq_perc(starwars, homeworld)
-
+``` r
 #all groups are equal so will print all three rows. 
 count_freq_perc(PlantGrowth, group, rows = 1)
+#> # A tibble: 3 × 3
+#>   group count percentage
+#>   <fct> <int>      <dbl>
+#> 1 ctrl     10       33.3
+#> 2 trt1     10       33.3
+#> 3 trt2     10       33.3
 ```
+
+# A tibble: 3 × 3
+
+group count percentage <fct> <int> <dbl> 1 ctrl 10 33.3 2 trt1 10 33.3 3
+trt2 10 33.3
