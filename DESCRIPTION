@@ -1,16 +1,22 @@
 Package: summarytable
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Summary Table Function
+Version: 0.1.0
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Hannah",
+           family = "James",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+           email = "hjames@student.ubc.ca")
+Description: Takes a data frame and a non-numeric variable from that data frame and creates a summary  of counts across the groups in that variable.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
+Suggests: testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports: stringr, dplyr, rlang, tidyr, magrittr, tibble, ds4psy
+Depends: R (>= 2.10)
+NeedsCompilation: no
+Packaged: 2021-11-19 22:27:58 UTC; hannahjames
+Author: Hannah James [aut, cre]
+Maintainer: Hannah James <hjames@student.ubc.ca>
